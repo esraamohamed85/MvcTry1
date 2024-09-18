@@ -1,0 +1,28 @@
+﻿@using WebApplication1.DAL.Entities
+
+@model List<Department>
+
+<table class="table table-dark table-striped">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Location</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <th scope="row">@item.Id</th>
+                <td>@item.Name</td>
+                <td>@item.location</td>
+
+            </tr>
+
+        }
+
+    </tbody>
+</table>
